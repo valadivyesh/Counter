@@ -1,16 +1,115 @@
-# React + Vite
+# React Timer & Counter Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project showcases a simple yet functional **React Timer** and **Increment-Decrement Counter** built using React functional components and hooks. It is designed as a clean beginner-friendly implementation that demonstrates state management, event handling, and component structure in React.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Project Overview
 
-## React Compiler
+This project contains **two core features**:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1️⃣ **Timer Component**
 
-## Expanding the ESLint configuration
+* Starts counting seconds when the timer begins.
+* Pauses the timer without resetting.
+* Resets the timer back to 0.
+* Built using the `useState` and `useEffect` hooks.
+* Uses `setInterval` for time updates and proper cleanup using `clearInterval`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2️⃣ **Increment-Decrement Counter**
+
+* Simple counter with three buttons: **+ Increase**, **- Decrease**, and **Reset**.
+* Uses `useState` to store the counter value.
+* Prevents negative values (optional, based on your implementation).
+
+---
+
+## 🧠 What You Learn From This Project
+
+* Understanding and using React Hooks (`useState`, `useEffect`).
+* Handling intervals and cleanup in React.
+* Building reusable UI components.
+* Mastering basic interactions and real-time updates in React.
+
+---
+
+## 📁 Folder Structure
+
+```
+project-folder/
+│
+├── src/
+│   ├── components/
+│   │   ├── Timer.jsx
+│   │   └── Counter.jsx
+│   ├── App.jsx
+│   ├── index.js
+│   └── App.css
+│
+├── package.json
+└── README.md
+```
+
+---
+
+## 🛠️ Technologies Used
+
+* **React JS**
+* **JavaScript (ES6+)**
+* **CSS for basic styling**
+
+---
+
+## 📝 Example Timer Logic (Concept)
+
+The timer works using:
+
+* A `seconds` state to track time
+* A `running` state to check if timer is active
+* An interval set inside `useEffect`
+
+When you click start:
+
+```
+setRunning(true)
+```
+
+React continuously updates the timer every second until paused or reset.
+
+---
+
+## 📌 Example Counter Logic (Concept)
+
+The counter simply updates state like:
+
+```
+setCount(count + 1)
+setCount(count - 1)
+setCount(0)
+```
+
+And React re-renders the UI instantly.
+
+---
+
+## ▶️ How to Run the Project
+
+1. Install dependencies:
+
+```
+npm install
+```
+
+2. Start development server:
+
+```
+npm start
+```
+
+3. Open in browser:
+
+```
+http://localhost:3000
+```
+
+---
